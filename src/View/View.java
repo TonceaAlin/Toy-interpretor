@@ -1,3 +1,5 @@
+package View;
+
 import Controller.Runner;
 import Model.Expression.ValueExpression;
 import Model.Expression.VariableExpression;
@@ -13,7 +15,6 @@ import Model.Types.TBool;
 import Model.Types.TNumber;
 import Model.Values.Boolean;
 import Model.Values.Integer;
-import Model.Values.Value;
 
 import java.util.Scanner;
 
@@ -86,18 +87,18 @@ public class View {
                                                 new Print(new VariableExpression("b"))))));
             }
             ExecutionStack stack = new ExecutionStack();
-//            SymbolTable symbolTable = new SymbolTable();
-//            OutputStream output = new OutputStream();
-//            ProgramState state = new ProgramState(stack, symbolTable, output, stateR);
-//            Runner run = new Runner();
+            SymbolTable symbolTable = new SymbolTable();
+            OutputStream output = new OutputStream();
+            //ProgramState state = new ProgramState(stack, symbolTable, output, stateR);
+            //Runner run = new Runner(repository);
 
-            try{
-                //run.allSteps(state);
-                //System.out.println(state.toString());
-                //System.out.println(state.getOutput().toString());
-            }catch(RuntimeException exception){
-                System.out.println(exception.getMessage());
-            }
+//            try{
+//                run.allSteps();
+//                //System.out.println(state.toString());
+//                System.out.println(state.getOutput().toString());
+//            }catch(RuntimeException exception){
+//                System.out.println(exception.getMessage());
+//            }
         }
     }
 }

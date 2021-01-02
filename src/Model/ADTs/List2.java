@@ -26,4 +26,8 @@ public class List2<T> implements Iterable<T>{
     public Iterator<T> iterator() {
         return list.iterator();
     }
+
+    public ArrayList<T> getAll(){
+        return this.list;
+    }
 }

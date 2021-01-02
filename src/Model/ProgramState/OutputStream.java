@@ -22,4 +22,12 @@ public class OutputStream {
             values += each.toString();
         return values;
     }
+
+    public String toFile(){
+        String result = " Output: ";
+        for (var element: output.getAll()){
+            result += "\n" + element;
+        }
+        return result;
+    }
 }

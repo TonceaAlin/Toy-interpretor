@@ -1,7 +1,10 @@
 package Model.Statem;
 
+import Model.ADTs.Dict2;
+import Model.Exceptions.TypeException;
 import Model.ProgramState.ExecutionStack;
 import Model.ProgramState.ProgramState;
+import Model.Types.Type;
 
 public class Compound implements Statement{
 
@@ -19,7 +22,12 @@ public class Compound implements Statement{
         stack.push(right);
         stack.push(left);
 
-        return state;
+        return null;
+    }
+
+    @Override
+    public Dict2<String, Type> typeChecker(Dict2<String, Type> typeEnv) throws TypeException {
+        return right.typeChecker(left.typeChecker(typeEnv));
     }
 
     public Statement getRight() {

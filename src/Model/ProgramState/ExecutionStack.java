@@ -26,10 +26,22 @@ public class ExecutionStack {
     public boolean isEmpty(){return this.executionStack.size()==0;}
 
     public String toString(){
-        String result = " ";
+        String result = "";
         for(var each: this.executionStack.getAll()){
             result += each.toString();
         }
         return result;
+    }
+
+    public String toFile(){
+        String result = "Execution Stack: ";
+        for(var each: this.executionStack.getAll()){
+            result += "\n" + each.toString();
+        }
+        return result;
+    }
+
+    public Statement peek() {
+        return this.executionStack.peek();
     }
 }

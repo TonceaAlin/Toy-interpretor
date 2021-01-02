@@ -13,7 +13,9 @@ public class Stack2<T> {
         };
     }
 
-
+    public T peek(){
+        return innerStack.peek();
+    }
     public void push(T element){
         innerStack.push(element);
     }

@@ -2,6 +2,11 @@ package Repository;
 
 import Model.ProgramState.ProgramState;
 
+import java.util.List;
+
 public interface Repository {
-    ProgramState getCertainProgram(ProgramState state);
+    List<ProgramState> getProgramList();
+    void setProgramList(List<ProgramState> states);
+    void addProgram(ProgramState programState);
+    void logProgramStateExecution(ProgramState state) throws RuntimeException;
 }
